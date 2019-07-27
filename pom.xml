@@ -6,7 +6,110 @@
 
     <groupId>com.doufuplus</groupId>
     <artifactId>springboot-master</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>springboot-common</module>
+        <module>springboot-core</module>
+        <module>springboot-shiro-jwt</module>
+        <module>springboot-shiro-jwt-sso</module>
+    </modules>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <java.version>1.8</java.version>
+        <doufuplus.version>1.0-SNAPSHOT</doufuplus.version>
+
+        <spring-boot.version>2.1.6.RELEASE</spring-boot.version>
+
+        <druid.version>1.1.10</druid.version>
+        <mybatis.version>2.0.0</mybatis.version>
+        <mybatis-plus-boot.version>3.1.2</mybatis-plus-boot.version>
+        <mybatis-plus.version>3.1.2</mybatis-plus.version>
+        <mybatis-plus-generate.version>2.3.3</mybatis-plus-generate.version>
+        <velocity.version>2.1</velocity.version>
+        <fastjson.version>1.2.58</fastjson.version>
+        <commons-lang3.version>3.9</commons-lang3.version>
+
+        <shiro-spring.version>1.4.0</shiro-spring.version>
+        <kaptcha.version>2.3.2</kaptcha.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <!--springboot-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <repositories>
+        <repository>
+            <id>public</id>
+            <name>aliyun nexus</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>public</id>
+            <name>aliyun nexus</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+    <build>
+        <finalName>springboot-master</finalName>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <delimiters>
+                        <delimiter>$</delimiter>
+                    </delimiters>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <!-- 源代码使用的开发版本 -->
+                    <source>${java.version}</source>
+                    <!-- 需要生成的目标class文件的编译版本 -->
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 
 </project>
