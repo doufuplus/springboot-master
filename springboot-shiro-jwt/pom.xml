@@ -20,6 +20,13 @@
             <version>${doufuplus.version}</version>
         </dependency>
 
+        <!-- 子工程 - redis -->
+        <dependency>
+            <groupId>com.doufuplus</groupId>
+            <artifactId>springboot-redis</artifactId>
+            <version>${doufuplus.version}</version>
+        </dependency>
+
         <!-- shiro -->
         <dependency>
             <groupId>org.apache.shiro</groupId>

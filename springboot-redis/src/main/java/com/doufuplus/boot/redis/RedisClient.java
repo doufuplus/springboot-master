@@ -1,26 +1,26 @@
-package com.doufuplus.redis;
-
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.concurrent.TimeUnit;
+package com.doufuplus.boot.redis;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
 /**
  * <pre>
- * RedisTemplate工具类：
- * 	针对所有的hash都是以h开头的方法
- * 	针对所有的Set都是以s开头的方法(不含通用方法)
- * 	针对所有的List都是以l开头的方法
- * </pre>
+ *  RedisTemplate工具类：
+ *  针对所有的hash都是以h开头的方法
+ *  针对所有的Set都是以s开头的方法(不含通用方法)
+ *  针对所有的List都是以l开头的方法
+ *  </pre>
  * 转载请注明出处，更多技术文章欢迎大家访问我的个人博客站点：https://www.doufuplus.com
  *
  * @author 丶doufu
- * @date 2019/7/27
+ * @date 2019/08/03
  */
 @Component
 public class RedisClient {

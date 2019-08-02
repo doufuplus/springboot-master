@@ -3,8 +3,8 @@ server:
 
 spring:
   application:
-    name: springboot-shiro-jwt
-  # profiles: springboot-shiro-jwt
+    name: springboot-shiro-jwt-sso
+  # profiles: springboot-shiro-jwt-sso
 
   ## 数据库配置 - start
   datasource:
@@ -39,8 +39,9 @@ spring:
       connect-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
       # 配置监控服务器
       stat-view-servlet:
+        enabled: true
         url-pattern: /druid/*
-        login-username: admin
+        login-username: doufuplus
         login-password: 123456
         reset-enable: false
         # 添加IP白名单
@@ -60,11 +61,11 @@ spring:
     # Redis数据库索引（默认为0）
     database: 1
     # Redis服务器地址
-    host: 192.168.1.160
+    host: 127.0.0.1
     # Redis服务器连接端口
     port: 6379
     # Redis服务器连接密码（默认为空）
-    password: xfk007
+    # password: "xfk007"
     # 连接超时时间（毫秒）
     timeout: 5000
     jedis:
@@ -138,10 +139,10 @@ logging:
 encryptAESKey: V2FuZzkyNuYSKIuwqTQkFQSUpXVA
 # JWT认证加密私钥(Base64加密)
 encryptJWTKey: U0JBUElOENhspJrzkyNjQ1NA
-# AccessToken过期时间-1天(秒为单位)
-accessTokenExpireTime: 86400
-# RefreshToken过期时间-7天-60*60*24*7(秒为单位)
+# AccessToken过期时间(秒)
+accessTokenExpireTime: 600
+# RefreshToken过期时间(秒)
 refreshTokenExpireTime: 604800
-# Shiro缓存过期时间-1天(秒为单位)(一般设置与AccessToken过期时间一致)
-shiroCacheExpireTime: 86400
+# Shiro缓存过期时间(秒)(一般设置与AccessToken过期时间一致)
+shiroCacheExpireTime: 600
 ## 其它配置 - end

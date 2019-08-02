@@ -1,4 +1,4 @@
-package com.doufuplus.po;
+package com.doufuplus.boot.po;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;

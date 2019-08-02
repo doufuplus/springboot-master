@@ -1,4 +1,4 @@
-package com.doufuplus.config;
+package com.doufuplus.boot.config;
 
 import com.alibaba.druid.spring.boot.autoconfigure.DruidDataSourceBuilder;
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;

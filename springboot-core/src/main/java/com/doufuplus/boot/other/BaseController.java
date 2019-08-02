@@ -1,4 +1,4 @@
-package com.doufuplus.other;
+package com.doufuplus.boot.other;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

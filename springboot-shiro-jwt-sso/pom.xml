@@ -20,12 +20,13 @@
             <version>${doufuplus.version}</version>
         </dependency>
 
-        <!-- kaptcha验证码 -->
+        <!-- 子工程 - redis -->
         <dependency>
-            <groupId>com.github.penggle</groupId>
-            <artifactId>kaptcha</artifactId>
-            <version>${kaptcha.version}</version>
+            <groupId>com.doufuplus</groupId>
+            <artifactId>springboot-redis</artifactId>
+            <version>${doufuplus.version}</version>
         </dependency>
+
     </dependencies>
 
 </project>
