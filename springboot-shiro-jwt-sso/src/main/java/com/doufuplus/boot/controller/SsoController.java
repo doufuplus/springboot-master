@@ -36,13 +36,17 @@ public class SsoController extends BaseController {
 
     /**
      * 登录
+     * 转载请注明出处，更多技术文章欢迎大家访问我的个人博客站点：https://www.doufuplus.com
+     *
+     * @author 丶doufu
+     * @date 2019/08/03
      */
     @PostMapping("/login")
     public Result login(String account, String password, HttpServletResponse response) {
 
         try {
-            if (!"doufuplus".equals(account) && "123456".equals(password)) {
-                return new Result(ResultCode.PASSWORD_ERROR);
+            if (!("doufuplus".equals(account) && "123456".equals(password))) {
+                return new Result(ResultCode.PASSWORD_ERROR, "account or password error.");
             }
 
             // 清除可能存在的shiro权限信息缓存
@@ -63,12 +67,16 @@ public class SsoController extends BaseController {
             return new Result().OK();
         } catch (Exception e) {
             e.printStackTrace();
+            return new Result(ResultCode.ERROR, e.getMessage());
         }
-        return new Result().NO();
     }
 
     /**
      * 退出
+     * 转载请注明出处，更多技术文章欢迎大家访问我的个人博客站点：https://www.doufuplus.com
+     *
+     * @author 丶doufu
+     * @date 2019/08/03
      */
     @RequestMapping("/logout")
     public Result logout() {
@@ -101,7 +109,7 @@ public class SsoController extends BaseController {
             return new Result().OK();
         } catch (Exception e) {
             e.printStackTrace();
+            return new Result(ResultCode.ERROR, e.getMessage());
         }
-        return new Result().NO();
     }
 }
