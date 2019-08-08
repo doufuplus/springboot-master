@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8002
 
 spring:
   application:
@@ -60,11 +60,11 @@ spring:
     # Redis数据库索引（默认为0）
     database: 1
     # Redis服务器地址
-    host: 192.168.1.160
+    host: 127.0.0.1
     # Redis服务器连接端口
     port: 6379
     # Redis服务器连接密码（默认为空）
-    password: xfk007
+    # password: "doufuplus"
     # 连接超时时间（毫秒）
     timeout: 5000
     jedis:
@@ -85,7 +85,7 @@ mybatis-plus:
   # mapper.xml扫描
   mapper-locations: classpath*:/mapper/*.xml
   # 实体扫描，多个package用逗号或者分号分隔
-  type-aliases-package: com.doufuplus.entity
+  type-aliases-package: com.doufuplus.boot.entity
   global-config:
     db-config:
       # 主键类型
@@ -124,3 +124,18 @@ logging:
   level:
     com.nfgj.medical.service: DEBUG
 ## 日志配置 - end
+
+
+## 其它配置 - start
+config:
+  # AES密码加密私钥(Base64加密)
+  encrypt-aesKey: V2FuZzkyNuYSKIuwqTQkFQSUpXVA
+  # JWT认证加密私钥(Base64加密)
+  encrypt-jwtKey: U0JBUElOENhspJrzkyNjQ1NA
+  # AccessToken过期时间(秒)
+  accessToken-expireTime: 600
+  # RefreshToken过期时间(秒)
+  refreshToken-expireTime: 604800
+  # Shiro缓存过期时间(秒)(一般设置与AccessToken过期时间一致)
+  shiro-cache-expireTime: 600
+## 其它配置 - end

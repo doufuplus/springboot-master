@@ -1,7 +1,7 @@
 package com.doufuplus.boot.po;
 
 import com.alibaba.fastjson.JSONObject;
-import com.doufuplus.boot.po.constant.ResultCode;
+import com.doufuplus.boot.constant.ResultCode;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.Serializable;

@@ -1,9 +1,9 @@
 package com.doufuplus.boot.controller;
 
 import com.doufuplus.boot.po.Result;
-import com.doufuplus.boot.po.constant.JwtConstant;
-import com.doufuplus.boot.po.constant.RedisConstant;
-import com.doufuplus.boot.po.constant.ResultCode;
+import com.doufuplus.boot.constant.JwtConstant;
+import com.doufuplus.boot.constant.RedisConstant;
+import com.doufuplus.boot.constant.ResultCode;
 import com.doufuplus.boot.redis.RedisClient;
 import com.doufuplus.boot.util.JwtUtil;
 import org.apache.commons.lang3.StringUtils;

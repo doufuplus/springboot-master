@@ -1,4 +1,4 @@
-package com.doufuplus.boot.po.constant;
+package com.doufuplus.boot.constant;
 
 /**
  * redis常量配置

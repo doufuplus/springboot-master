@@ -1,4 +1,4 @@
-package com.doufuplus.boot.po.constant;
+package com.doufuplus.boot.constant;
 
 /**
  * Security配置
