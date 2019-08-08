@@ -13,10 +13,10 @@
 
     <dependencies>
 
-        <!-- 子工程 - core -->
+        <!-- 子工程 - common -->
         <dependency>
             <groupId>com.doufuplus</groupId>
-            <artifactId>springboot-core</artifactId>
+            <artifactId>springboot-common</artifactId>
             <version>${doufuplus.version}</version>
         </dependency>
 
@@ -25,6 +25,12 @@
             <groupId>com.doufuplus</groupId>
             <artifactId>springboot-redis</artifactId>
             <version>${doufuplus.version}</version>
+        </dependency>
+
+        <!-- web模块 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
     </dependencies>

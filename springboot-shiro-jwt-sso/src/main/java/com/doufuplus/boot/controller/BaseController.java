@@ -1,4 +1,4 @@
-package com.doufuplus.boot.other;
+package com.doufuplus.boot.controller;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

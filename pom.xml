@@ -11,7 +11,6 @@
 
     <modules>
         <module>springboot-common</module>
-        <module>springboot-core</module>
         <module>springboot-shiro-jwt</module>
         <module>springboot-shiro-jwt-sso</module>
         <module>springboot-redis</module>

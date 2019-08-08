@@ -1,6 +1,5 @@
 package com.doufuplus.boot.controller;
 
-import com.doufuplus.boot.other.BaseController;
 import com.doufuplus.boot.po.Result;
 import com.doufuplus.boot.po.constant.JwtConstant;
 import com.doufuplus.boot.po.constant.RedisConstant;
@@ -28,7 +27,7 @@ import java.util.Enumeration;
 @RequestMapping("/sso")
 public class SsoController extends BaseController {
 
-    @Value("${refreshTokenExpireTime}")
+    @Value("${config.refreshToken-expireTime}")
     private String refreshTokenExpireTime;
 
     @Autowired

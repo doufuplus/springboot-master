@@ -39,12 +39,12 @@ public class JwtUtil {
      */
     private static String encryptJWTKey;
 
-    @Value("${accessTokenExpireTime}")
+    @Value("${config.accessToken-expireTime}")
     public void setAccessTokenExpireTime(String accessTokenExpireTime) {
         JwtUtil.accessTokenExpireTime = accessTokenExpireTime;
     }
 
-    @Value("${encryptJWTKey}")
+    @Value("${config.encrypt-jwtKey}")
     public void setEncryptJWTKey(String encryptJWTKey) {
         JwtUtil.encryptJWTKey = encryptJWTKey;
     }

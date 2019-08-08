@@ -16,6 +16,25 @@
 
     <dependencies>
 
+        <!-- 核心模块，包括自动配置支持、日志和YAML -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <!-- 浏览模块，包括JUnit、Hamcrest、Mockito -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.skyscreamer</groupId>
+                    <artifactId>jsonassert</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
         <!-- 健康检查 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>

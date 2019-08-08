@@ -13,10 +13,10 @@
 
     <dependencies>
 
-        <!-- 子工程 - core -->
+        <!-- 子工程 - common -->
         <dependency>
             <groupId>com.doufuplus</groupId>
-            <artifactId>springboot-core</artifactId>
+            <artifactId>springboot-common</artifactId>
             <version>${doufuplus.version}</version>
         </dependency>
 
@@ -27,11 +27,44 @@
             <version>${doufuplus.version}</version>
         </dependency>
 
+        <!-- web模块 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
         <!-- shiro -->
         <dependency>
             <groupId>org.apache.shiro</groupId>
             <artifactId>shiro-spring</artifactId>
             <version>${shiro-spring.version}</version>
+        </dependency>
+
+        <!-- mysql连接器 -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <!-- druid连接池 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>${druid.version}</version>
+        </dependency>
+
+        <!-- myBatis plus starter -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>${mybatis-plus-boot.version}</version>
+        </dependency>
+
+        <!-- myBatis plus -->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus</artifactId>
+            <version>${mybatis-plus.version}</version>
         </dependency>
 
     </dependencies>
