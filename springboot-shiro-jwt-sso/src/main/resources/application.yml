@@ -56,8 +56,6 @@ logging:
 
 ## 其它配置 - start
 config:
-  # AES密码加密私钥(Base64加密)
-  encrypt-aesKey: V2FuZzkyNuYSKIuwqTQkFQSUpXVA
   # JWT认证加密私钥(Base64加密)
   encrypt-jwtKey: U0JBUElOENhspJrzkyNjQ1NA
   # AccessToken过期时间(秒)

@@ -8,6 +8,7 @@ import org.apache.shiro.cache.Cache;
 import org.apache.shiro.cache.CacheException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import java.util.Collection;
 import java.util.Set;
@@ -19,6 +20,7 @@ import java.util.Set;
  * @author 丶doufu
  * @date 2019/08/03
  */
+@Component
 public class CustomCache<K, V> implements Cache<K, V> {
 
     @Value("${config.shiro-cache-expireTime}")
