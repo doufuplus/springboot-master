@@ -1,4 +1,4 @@
-package com.doufuplus.boot.config.shiro;
+package com.doufuplus.boot.config.exception;
 
 import com.doufuplus.boot.config.exception.CustomException;
 import com.doufuplus.boot.po.Result;

@@ -14,7 +14,7 @@ import java.util.Collection;
 import java.util.Set;
 
 /**
- * 重写Shiro的Cache保存读取
+ * 重写shiro的cache保存读取
  * 转载请注明出处，更多技术文章欢迎大家访问我的个人博客站点：https://www.doufuplus.com
  *
  * @author 丶doufu

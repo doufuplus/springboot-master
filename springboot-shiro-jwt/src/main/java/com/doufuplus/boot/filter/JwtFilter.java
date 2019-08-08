@@ -3,17 +3,15 @@ package com.doufuplus.boot.filter;
 import com.auth0.jwt.exceptions.SignatureVerificationException;
 import com.auth0.jwt.exceptions.TokenExpiredException;
 import com.doufuplus.boot.config.exception.CustomException;
-import com.doufuplus.boot.entity.po.JwtToken;
-import com.doufuplus.boot.po.Result;
 import com.doufuplus.boot.constant.JwtConstant;
 import com.doufuplus.boot.constant.RedisConstant;
 import com.doufuplus.boot.constant.ResultCode;
+import com.doufuplus.boot.entity.po.JwtToken;
+import com.doufuplus.boot.po.Result;
 import com.doufuplus.boot.redis.RedisClient;
 import com.doufuplus.boot.util.JsonConvertUtil;
 import com.doufuplus.boot.util.JwtUtil;
 import org.apache.shiro.web.filter.authc.BasicHttpAuthenticationFilter;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -126,7 +124,7 @@ public class JwtFilter extends BasicHttpAuthenticationFilter {
     }
 
     /**
-     * 此处为AccessToken刷新，进行判断RefreshToken是否过期，未过期就返回新的AccessToken且继续正常访问
+     * 刷新AccessToken，进行判断RefreshToken是否过期，未过期就返回新的AccessToken且继续正常访问
      */
     private boolean refreshToken(ServletRequest request, ServletResponse response) {
         // 拿到当前Header中Authorization的AccessToken(Shiro中getAuthzHeader方法已经实现)
