@@ -62,6 +62,4 @@ config:
   accessToken-expireTime: 600
   # RefreshToken过期时间(秒)
   refreshToken-expireTime: 604800
-  # Shiro缓存过期时间(秒)(一般设置与AccessToken过期时间一致)
-  shiro-cache-expireTime: 600
 ## 其它配置 - end

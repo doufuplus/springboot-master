@@ -12,6 +12,7 @@ import org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreato
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
+import org.springframework.data.redis.core.RedisTemplate;
 
 import javax.servlet.Filter;
 import java.util.HashMap;
@@ -32,7 +33,7 @@ public class ShiroConfig {
      * http://shiro.apache.org/session-management.html#SessionManagement-StatelessApplications%28Sessionless%29
      */
     @Bean("securityManager")
-    public DefaultWebSecurityManager getManager(UserRealm userRealm) {
+    public DefaultWebSecurityManager getManager(UserRealm userRealm, RedisTemplate<String, Object> template) {
         DefaultWebSecurityManager manager = new DefaultWebSecurityManager();
         // 使用自定义Realm
         manager.setRealm(userRealm);
@@ -43,8 +44,15 @@ public class ShiroConfig {
         subjectDAO.setSessionStorageEvaluator(defaultSessionStorageEvaluator);
         manager.setSubjectDAO(subjectDAO);
         // 设置自定义Cache缓存
-        manager.setCacheManager(new CustomCacheManager());
+        manager.setCacheManager(new CustomCacheManager(template));
         return manager;
+    }
+
+    /**
+     * 生成一个ShiroRedisCacheManager
+     **/
+    private CustomCacheManager cacheManager(RedisTemplate template) {
+        return new CustomCacheManager(template);
     }
 
     /**

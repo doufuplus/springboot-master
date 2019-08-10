@@ -2,32 +2,38 @@ package com.doufuplus.boot.config.shiro.cache;
 
 import com.doufuplus.boot.constant.JwtConstant;
 import com.doufuplus.boot.constant.RedisConstant;
-import com.doufuplus.boot.redis.RedisClient;
 import com.doufuplus.boot.util.JwtUtil;
 import org.apache.shiro.cache.Cache;
 import org.apache.shiro.cache.CacheException;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+import org.springframework.data.redis.core.RedisTemplate;
 
 import java.util.Collection;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 /**
- * 重写shiro的cache保存读取
+ * 重写Shiro的Cache保存读取
  * 转载请注明出处，更多技术文章欢迎大家访问我的个人博客站点：https://www.doufuplus.com
  *
  * @author 丶doufu
  * @date 2019/08/03
  */
-@Component
 public class CustomCache<K, V> implements Cache<K, V> {
 
-    @Value("${config.shiro-cache-expireTime}")
-    private String shiroCacheExpireTime;
+    // TODO redis @Autowired注入失败，因此改为下面采用传参形式
+    // @Autowired
+    // private RedisClient redis = new RedisClient();
 
-    @Autowired
-    private RedisClient redis;
+    // TODO @Value注入失败 @Value("${config.shiro-cache-expireTime}")
+    private String shiroCacheExpireTime = "600";
+
+    private RedisTemplate<String, Object> redisTemplate;
+
+    public CustomCache(RedisTemplate redisTemplate) {
+        // 使用StringRedisSerializer做序列化
+        // redisTemplate.setValueSerializer(new StringRedisSerializer());
+        this.redisTemplate = redisTemplate;
+    }
 
     /**
      * 缓存的key名称获取为shiro:cache:account
@@ -46,10 +52,7 @@ public class CustomCache<K, V> implements Cache<K, V> {
      */
     @Override
     public Object get(Object key) throws CacheException {
-        if (!redis.hasKey(this.getKey(key))) {
-            return null;
-        }
-        return redis.get(this.getKey(key));
+        return redisTemplate.opsForValue().get(this.getKey(key));
     }
 
     /**
@@ -62,7 +65,13 @@ public class CustomCache<K, V> implements Cache<K, V> {
         // String shiroCacheExpireTime =
         // PropertiesUtil.getProperty("shiroCacheExpireTime");
         // 设置Redis的Shiro缓存
-        return redis.set(this.getKey(key), value, Integer.parseInt(shiroCacheExpireTime));
+        try {
+            redisTemplate.opsForValue().set(this.getKey(key), value, Integer.parseInt(shiroCacheExpireTime), TimeUnit.SECONDS);
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
     /**
@@ -70,10 +79,7 @@ public class CustomCache<K, V> implements Cache<K, V> {
      */
     @Override
     public Object remove(Object key) throws CacheException {
-        if (!redis.hasKey(this.getKey(key))) {
-            return null;
-        }
-        redis.del(this.getKey(key));
+        redisTemplate.delete(this.getKey(key));
         return null;
     }
 
