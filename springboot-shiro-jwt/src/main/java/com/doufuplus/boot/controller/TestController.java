@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
+ * TestController
  * 转载请注明出处，更多技术文章欢迎大家访问我的个人博客站点：https://www.doufuplus.com
  *
  * @author 丶doufu
@@ -36,6 +37,10 @@ public class TestController extends BaseController {
 
     /**
      * 获取当前登录用户
+     * 转载请注明出处，更多技术文章欢迎大家访问我的个人博客站点：https://www.doufuplus.com
+     *
+     * @author 丶doufu
+     * @date 2019/8/10
      */
     @RequestMapping("/current")
     public Result current() {
