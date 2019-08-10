@@ -1,6 +1,9 @@
 package com.doufuplus.boot.service.impl;
 
+import com.doufuplus.boot.entity.User;
+import com.doufuplus.boot.mapper.UserMapper;
 import com.doufuplus.boot.service.TestService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -11,4 +14,12 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class TestServiceImpl implements TestService {
+
+    @Autowired
+    private UserMapper userMapper;
+
+    @Override
+    public User findUserByAccount(String account) {
+        return userMapper.findByAccount(account);
+    }
 }

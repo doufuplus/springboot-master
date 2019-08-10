@@ -1,7 +1,14 @@
 package com.doufuplus.boot.controller;
 
+import com.doufuplus.boot.constant.JwtConstant;
+import com.doufuplus.boot.entity.User;
+import com.doufuplus.boot.util.JwtUtil;
+import io.netty.util.internal.StringUtil;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.servlet.http.HttpServletRequest;
@@ -109,4 +116,5 @@ public class BaseController {
 
         return ipAddress;
     }
+
 }
