@@ -9,15 +9,11 @@ package com.doufuplus.boot.constant;
  */
 public interface Security {
 
-    String ACCOUNT = "nfgj";
+    String ACCOUNT = "doufuplus";
 
     String PASSWORD = "123456";
 
-    String ACCOUNT_2 = "admin";
-
-    String PASSWORD_2 = "123456";
-
-    String SIGNING_KEY = "nurse";
+    String SIGNING_KEY = "doufuplus";
 
     class ROLES {
 
