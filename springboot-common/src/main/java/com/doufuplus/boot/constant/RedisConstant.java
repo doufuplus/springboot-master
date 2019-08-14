@@ -9,7 +9,7 @@ package com.doufuplus.boot.constant;
  */
 public interface RedisConstant {
 
-    String BASE_KEY = "nurse_";
+    String BASE_KEY = "doufuplus_";
 
     /**
      * redis过期时间，以秒为单位，一分钟
