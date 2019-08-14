@@ -15,6 +15,9 @@ public interface Security {
 
     String SIGNING_KEY = "doufuplus";
 
+    /**
+     * 角色
+     */
     class ROLES {
 
         public static final String ADMIN = "ADMIN";
