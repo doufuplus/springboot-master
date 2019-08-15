@@ -3,8 +3,8 @@ server:
 
 spring:
   application:
-    name: springboot-shiro-jwt
-  # profiles: springboot-shiro-jwt
+    name: springboot-shiro-jwt-web
+  # profiles: springboot-shiro-jwt-web
 
   ## 数据库配置 - start
   datasource:
@@ -85,7 +85,7 @@ mybatis-plus:
   # mapper.xml扫描
   mapper-locations: classpath*:/mapper/*.xml
   # 实体扫描，多个package用逗号或者分号分隔
-  type-aliases-package: com.doufuplus.boot.entity
+  type-aliases-package: com.doufuplus.boot.shiro.entity
   global-config:
     db-config:
       # 主键类型
@@ -112,7 +112,7 @@ mybatis-plus:
 
 ## product配置 - start
 info:
-  app.name: springboot-shiro-jwt
+  app.name: springboot-shiro-jwt-web
   company.name: doufuplus
   build.artifactId: $project.artifactId$
   build.modelVersion: $project.modelVersion$

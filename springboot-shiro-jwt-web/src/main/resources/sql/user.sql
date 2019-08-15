@@ -11,7 +11,7 @@
  Target Server Version : 50726
  File Encoding         : 65001
 
- Date: 15/08/2019 10:21:28
+ Date: 15/08/2019 10:51:56
 */
 
 SET NAMES utf8mb4;
@@ -28,5 +28,10 @@ CREATE TABLE `user`  (
   `create_time` timestamp(0) NULL DEFAULT NULL COMMENT '创建时间',
   PRIMARY KEY (`id`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci COMMENT = '用户表' ROW_FORMAT = Dynamic;
+
+-- ----------------------------
+-- Records of user
+-- ----------------------------
+INSERT INTO `user` VALUES ('1', 'doufuplus', NULL, NULL);
 
 SET FOREIGN_KEY_CHECKS = 1;

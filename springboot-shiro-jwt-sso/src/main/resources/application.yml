@@ -40,7 +40,7 @@ spring:
 
 ## product配置 - start
 info:
-  app.name: springboot-shiro-jwt
+  app.name: springboot-shiro-jwt-sso
   company.name: doufuplus
   build.artifactId: $project.artifactId$
   build.modelVersion: $project.modelVersion$
