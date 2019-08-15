@@ -25,6 +25,10 @@
         <!-- transactional start -->
         <module>springboot-transactional</module>
         <!-- transactional end -->
+
+        <!-- activemq -->
+        <module>springboot-activemq01</module>
+
     </modules>
 
     <properties>
@@ -45,7 +49,6 @@
         <fastjson.version>1.2.58</fastjson.version>
         <commons-lang3.version>3.9</commons-lang3.version>
         <java-jwt.version>3.8.1</java-jwt.version>
-
         <shiro-spring.version>1.4.0</shiro-spring.version>
     </properties>
 
