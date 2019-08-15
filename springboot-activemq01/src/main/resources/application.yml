@@ -1,0 +1,39 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: springboot-activemq
+  # profiles: springboot-activemq
+
+
+  # activema - start
+  activemq:
+    # 地址
+    broker-url: tcp://127.0.0.1:61616
+    user: admin
+    password: admin
+    pool:
+      # 开启连接池
+      enabled: true
+      # 最大连接数
+      max-connections: 20
+      # 连接闲置超时时间(s)
+      idle-timeout: 30
+  # activema - end
+
+
+## product配置 - start
+info:
+  app.name: springboot-activemq
+  company.name: doufuplus
+  build.artifactId: $project.artifactId$
+  build.modelVersion: $project.modelVersion$
+## product配置 - end
+
+
+## 日志配置 - start
+logging:
+  level:
+    com.nfgj.medical.service: DEBUG
+## 日志配置 - end
