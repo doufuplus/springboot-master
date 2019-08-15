@@ -16,15 +16,6 @@
         <module>springboot-shiro-jwt-web</module>
         <module>springboot-shiro-jwt-sso</module>
         <!-- shiro-jwt end -->
-
-        <!-- common start-->
-        <module>springboot-common</module>
-        <module>springboot-redis</module>
-        <!-- common end -->
-
-        <!-- transactional start -->
-        <module>springboot-transactional</module>
-        <!-- transactional end -->
     </modules>
 
     <properties>
