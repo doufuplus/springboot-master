@@ -1,5 +1,4 @@
 # springboot-shiro-jwt
-***更多最新文章欢迎大家访问我的个人博客 ⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄：[豆腐别馆](https://www.doufuplus.com)***
 
 1. master主干放置了springboot所有的相关工程，请切换分支获取相应代码。
 
@@ -7,6 +6,12 @@
 
 
 文章地址：
+
 [SpringBoot整合shiro+jwt+redis - 无状态token登录（一）总览篇](https://www.doufuplus.com/blog/shiro-jwt01.html)
+
 [SpringBoot整合shiro+jwt+redis - 无状态token登录（二）授权篇](https://www.doufuplus.com/blog/shiro-jwt02.html)
+
 [SpringBoot整合shiro+jwt+redis - 无状态token登录（鉴权）鉴权篇](https://www.doufuplus.com/blog/shiro-jwt03.html)
+
+
+***更多最新文章欢迎大家访问我的个人博客 ⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄：[豆腐别馆](https://www.doufuplus.com)***
