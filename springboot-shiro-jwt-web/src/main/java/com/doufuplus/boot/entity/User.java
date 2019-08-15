@@ -6,6 +6,8 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
+import java.util.Date;
+
 /**
  * 用户表
  * 转载请注明出处，更多技术文章欢迎大家访问我的个人博客站点：https://www.doufuplus.com
@@ -27,20 +29,17 @@ public class User {
     /**
      * 账号
      */
-    @TableField("account")
     private String account;
 
     /**
      * 密码
      */
-    @TableField("password")
     private String password;
 
     /**
-     * 盐值
+     * 创建时间
      */
-    @TableField("salt")
-    private String salt;
+    private Date createTime;
 
 
     public User() {
@@ -70,12 +69,12 @@ public class User {
         this.password = password;
     }
 
-    public String getSalt() {
-        return salt;
+    public Date getCreateTime() {
+        return createTime;
     }
 
-    public void setSalt(String salt) {
-        this.salt = salt;
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 
     @Override
@@ -84,7 +83,7 @@ public class User {
                 "id='" + id + '\'' +
                 ", account='" + account + '\'' +
                 ", password='" + password + '\'' +
-                ", salt='" + salt + '\'' +
+                ", createTime=" + createTime +
                 '}';
     }
 }

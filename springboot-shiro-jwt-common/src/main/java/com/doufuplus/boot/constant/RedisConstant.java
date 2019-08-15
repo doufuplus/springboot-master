@@ -9,9 +9,6 @@ package com.doufuplus.boot.constant;
  */
 public interface RedisConstant {
 
-    /**
-     *
-     */
     String BASE_KEY = "doufuplus_";
 
     /**
