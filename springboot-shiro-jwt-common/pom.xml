@@ -9,9 +9,9 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>springboot-common</artifactId>
+    <artifactId>springboot-shiro-jwt-common</artifactId>
     <version>${doufuplus.version}</version>
-    <name>springboot-common</name>
+    <name>springboot-shiro-jwt-common</name>
     <description>common project for doufuplus</description>
 
     <dependencies>

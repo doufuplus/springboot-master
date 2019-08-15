@@ -9,14 +9,15 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>springboot-redis</artifactId>
+    <artifactId>springboot-shiro-jwt-redis</artifactId>
+	<version>${doufuplus.version}</version>
 
 	<dependencies>
 
 		<!-- 子工程(common) -->
 		<dependency>
 			<groupId>com.doufuplus</groupId>
-			<artifactId>springboot-common</artifactId>
+			<artifactId>springboot-shiro-jwt-common</artifactId>
 			<version>${doufuplus.version}</version>
 		</dependency>
 
