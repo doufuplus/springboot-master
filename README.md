@@ -1,7 +1,7 @@
-# springboot-master
-1. master主干放置了springboot所有的相关工程，请切换分支获取相应代码。
+# springboot-mq
 
-2. 如需使用master代码，请于根pom中的modules注释掉相关未使用工程。
+相关文章：
 
+[SpringBoot整合Activemq（一）快速集成](https://www.doufuplus.com/blog/activemq01.html)
 
 更多最新文章欢迎大家访问我的个人博客:blush:：[豆腐别馆](https://www.doufuplus.com)
