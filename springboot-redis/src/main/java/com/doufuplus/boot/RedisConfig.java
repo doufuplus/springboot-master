@@ -1,4 +1,4 @@
-package com.doufuplus.boot.shiro;
+package com.doufuplus.boot;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.PropertyAccessor;

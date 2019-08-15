@@ -1,4 +1,4 @@
-package com.doufuplus.boot.shiro;
+package com.doufuplus.boot;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
