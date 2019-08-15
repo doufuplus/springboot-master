@@ -10,10 +10,21 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
+        <!-- shiro-jwt start -->
         <module>springboot-shiro-jwt-common</module>
         <module>springboot-shiro-jwt-redis</module>
         <module>springboot-shiro-jwt-web</module>
         <module>springboot-shiro-jwt-sso</module>
+        <!-- shiro-jwt end -->
+
+        <!-- common start-->
+        <module>springboot-common</module>
+        <module>springboot-redis</module>
+        <!-- common end -->
+
+        <!-- transactional start -->
+        <module>springboot-transactional</module>
+        <!-- transactional end -->
     </modules>
 
     <properties>
