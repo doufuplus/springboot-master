@@ -28,6 +28,7 @@
 
         <!-- activemq -->
         <module>springboot-activemq01</module>
+        <module>springboot-activemq02</module>
 
     </modules>
 
